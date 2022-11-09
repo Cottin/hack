@@ -1,0 +1,13 @@
+#!/bin/bash
+
+trap printout SIGINT
+printout() {
+    echo ""
+    rm -rf ./temp
+    echo "Cleanup of ./temp finished"
+    exit
+}
+while :
+do
+    sleep 1
+done
